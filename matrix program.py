@@ -1,5 +1,5 @@
 def matrix_mul(c, d, A, f, h,
-               B):  # https://stackoverflow.com/questions/61943939/python-matrix-multiplication-check-if-number-of-rows-of-1st-matrix-is-equal-to-n
+               B):  
     if d != f:  # For defining function and usage of if else statements I referred stackoverflow
         print("Matrix Multiplication is NOT POSSIBLE")
         print("Matrix order must be same since, \nThe matrix A column is " + str(+d) + "\nThe matrix B row is " + str(
@@ -28,11 +28,12 @@ def matrix_mul(c, d, A, f, h,
 # The input process from the user is to run the for loop so that my code doesn't terminates itself if we give wrong matrix order it runs again and again until it successfully completes the multiplication
 procces = (int(input("Enter No. of times to perform Matrix Mulplication : ")))
 for i in range(procces):
-    def matrix_AB():  # https://java2blog.com/matrix-multiplication-in-python-using-user-input/&sa=D&source=editors&ust=1644218952708575&usg=AOvVaw1NV7OhEWGf0O26RIozRbc_
+    def matrix_AB(): 
+     
         print("Enter order of 1st matrix:")  # For getting input from user for both matrix A and B I referred Java2Blog
         #  To take integer inputs in one line I referred Java2Blog
         c, d = list(
-            map(int, input().split()))  # https://java2blog.com/matrix-multiplication-in-python-using-user-input/
+            map(int, input().split())) 
         print("Enter Row wise values")
         A = []
         # For row wise insertion in the matrix I referred Java2Blog
@@ -40,13 +41,13 @@ for i in range(procces):
             print("Enter row", i, "value:")
             # To take 1d- integer array input in one line I referred Java2Blog
             row = list(
-                map(int, input().split()))  # https://java2blog.com/matrix-multiplication-in-python-using-user-input/
+                map(int, input().split()))  
             A.append(row)
 
         print("Enter order of 2nd matrix:")
         # To take integer inputs in one line I referred Java2Blog
         f, h = list(
-            map(int, input().split()))  # https://java2blog.com/matrix-multiplication-in-python-using-user-input/
+            map(int, input().split()))  
         print("Enter Row wise values")
         B = []
         # For row wise insertion in the matrix I referred Java2Blog
@@ -54,7 +55,7 @@ for i in range(procces):
             print("Enter row", j, "value:")
             # To take 1d- integer array input in one line I referred Java2Blog
             row = list(
-                map(int, input().split()))  # https://java2blog.com/matrix-multiplication-in-python-using-user-input/
+                map(int, input().split())) 
             B.append(row)
 
         print("Matrix A: ")  # for printing matrix in row wise Matrix A and B I referred
@@ -65,7 +66,6 @@ for i in range(procces):
         for row in B:
             print(row)
         matrix_mul(c, d, A, f, h,
-                   B)  # https://stackoverflow.com/questions/61943939/python-matrix-multiplication-check-if-number-of-rows-of-1st-matrix-is-equal-to-n
-
+                   B)  
 
     matrix_AB()  # for calling matrix_mul and matrix_AB I referred stackoverflow
